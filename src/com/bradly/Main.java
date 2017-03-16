@@ -148,7 +148,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }
 
-        try(BufferedWriter filewriter = new BufferedWriter(new FileWriter(resolvedFilename))){
+        try(BufferedWriter filewriter = new BufferedWriter(new FileWriter(resolvedFilename,true))){
             for(Ticket t : resolvedTickets){
                 filewriter.write(t+"; Resolved On: " +
                         dateFormat.format(date) + "; Resolution: " + t.getResolution()+"\n");
