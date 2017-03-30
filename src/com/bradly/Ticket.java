@@ -11,6 +11,15 @@ import java.util.Date;
 public class Ticket {
 
     private int priority;
+
+    public String getReporter() {
+        return reporter;
+    }
+
+    public Date getDateReported() {
+        return dateReported;
+    }
+
     private String reporter; //Stores person or department who reported issue
     private String description;
     private Date dateReported;

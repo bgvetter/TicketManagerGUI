@@ -10,11 +10,14 @@ public class Main {
 
     public static void main(String[] args) {
         LinkedList<Ticket> ticketQueue = new LinkedList<>();
-        Scanner scan = new Scanner(System.in);
-        LinkedList<Ticket> resolvedTickets = new LinkedList<>();
+        //Scanner scan = new Scanner(System.in);
+        //LinkedList<Ticket> resolvedTickets = new LinkedList<>();
 
         open(ticketQueue);
 
+        TicketManager ticketManagerGUI = new TicketManager(ticketQueue);
+
+        /*
         while(true){
             System.out.println("1. Enter Ticket\n" +
                     "2. Search Ticket by Issue\n" +
@@ -65,6 +68,7 @@ public class Main {
             }
         }
         scan.close();
+        */
     }
 
     protected static void open(LinkedList<Ticket> ticketQueue){
@@ -127,7 +131,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }
     }
-
+/*
     protected static void close(LinkedList<Ticket> ticketQueue,LinkedList<Ticket> resolvedTickets){
         String openFilename,resolvedFilename;
         openFilename="open_tickets.txt";
@@ -259,7 +263,7 @@ public class Main {
             }
         }
     }
-
+*/
     protected static void addTicketInPriorityOrder(LinkedList<Ticket> tickets, Ticket newTicket){
 
         //Logic: assume the list is either empty or sorted
@@ -286,7 +290,7 @@ public class Main {
         //If that happens, it must be lower priority than all other tickets. So, add to the end.
         tickets.addLast(newTicket);
     }
-
+/*
     protected static void printAllTickets(LinkedList<Ticket> tickets,LinkedList<Ticket> resolvedTickets) {
         printOpenTickets(tickets);
         printResolvedTickets(resolvedTickets);
@@ -314,5 +318,5 @@ public class Main {
         }
         System.out.println(" ------- End of ticket list ----------");
     }
-
+*/
 }
